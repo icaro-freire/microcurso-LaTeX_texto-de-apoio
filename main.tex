@@ -1,0 +1,20 @@
+% arara: lualatex
+% arara: lualatex if found('log', 'undefinede references')
+
+% arara: clean: {extensions: [aux, fdb_latexmk, fls, listing, log, out, pdf]}
+
+% classe do documento ====================================================
+\documentclass{book}
+
+\input{configs/packages.sty} %-----> inserindo pacotes fundamentais
+\input{configs/settings.sty} %-----> configurações gerais
+
+% início do documento ====================================================
+\begin{document}
+%-----------------------------------------------------------------------
+%
+  \maketitle
+%
+  \input{tex/intro.tex}
+%-----------------------------------------------------------------------
+\end{document}

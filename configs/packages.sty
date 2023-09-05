@@ -1,0 +1,63 @@
+
+% fontes e cia
+\usepackage{euler}
+\usepackage{fontspec}
+  \setmainfont[Ligatures=TeX]{TeX Gyre Pagella}
+  \setsansfont[Ligatures=TeX]{Oxygen}
+  \setmonofont[Scale=MatchLowercase]{Andika}
+  \newfontfamily{\terminal}{Inconsolata Nerd Font Mono}
+
+% linguagem 
+\usepackage[brazilian]{babel}
+
+% margens 
+\usepackage[a5paper]{geometry}
+
+% matemática 
+\usepackage{mathtools}
+\usepackage{amsthm, amssymb}
+
+% tabelas e figuras
+\usepackage{tabularray}
+\usepackage[%
+  font={small, sf}, 
+  labelfont={bf, sf}
+]{caption}
+\usepackage{graphicx}
+  \graphicspath{ {./figs/} }
+
+% seções sem serifa
+\usepackage{sectsty}
+  \allsectionsfont{\sffamily}
+
+% protusão 
+\usepackage{microtype}
+
+% cores
+\usepackage{xcolor}
+
+% simbologias e adornos
+\usepackage{hologo}
+\usepackage{postit}
+\usepackage{emoji}
+
+% códigos LaTeX 
+\usepackage{ProfLycee}
+
+% hiperlinks e metadados
+\usepackage{hyperref}
+  \hypersetup
+  {
+    colorlinks   = true,
+    linkcolor    = blue,
+    citecolor    = blue,
+    filecolor    = blue,
+    urlcolor     = blue,
+    pdfnewwindow = true,
+    pdfproducer  = {LuaTeX},
+    pdfcreator   = {LaTeX2e com neovim e arara}, 
+    pdftitle     = {Microcurso sobre LaTeX (texto de apoio)},
+    pdfauthor    = {Ícaro Vidal Freire},
+    pdfsubject   = {Minicurso para Semanas de Matemática},
+    pdfkeywords  = {tex, latex, lualatex, arara, minicurso, ufrb, math}
+  }
