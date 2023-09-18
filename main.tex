@@ -1,7 +1,8 @@
 % arara: lualatex
+%% arara: lualatex
 % arara: lualatex if found('log', 'undefinede references')
 
-% arara: clean: {extensions: [aux, fdb_latexmk, fls, listing, log, out, pdf]}
+%% arara: clean: {extensions: [aux, fdb_latexmk, fls, listing, log, out, pdf, toc]}
 
 % classe do documento ====================================================
 \documentclass{book}
@@ -11,10 +12,29 @@
 
 % início do documento ====================================================
 \begin{document}
-%-----------------------------------------------------------------------
+% 
+  \frontmatter % pré-textuais ---------------------------------------
 %
   \maketitle
 %
-  \input{tex/intro.tex}
-%-----------------------------------------------------------------------
+  \include{tex/pre-textuais/info.tex} %-------------------> copyright
+  \include{tex/pre-textuais/00_intro.tex} %--------------> introdução
+%
+  {\sffamily \tableofcontents}
+%
+  \mainmatter % principais ------------------------------------------
+%
+  \include{tex/capitulos/01_latex.tex} %----------------> capítulo 01
+  \include{tex/capitulos/02_modo-texto.tex} %----------------> capítulo 01
+  \include{tex/capitulos/03_modo-math.tex} %----------------> capítulo 01
+  \include{tex/capitulos/04_passo-a-passo.tex} %----------------> capítulo 01
+%
+  \appendix % apêndices ---------------------------------------------
+  \include{tex/apendices/01_overleaf.tex}
+  \include{tex/apendices/02_phd.tex}
+%
+%
+  \backmatter % bibliografia ----------------------------------------
+%
 \end{document}
+%=========================================================================

@@ -3,9 +3,14 @@
 \usepackage{euler}
 \usepackage{fontspec}
   \setmainfont[Ligatures=TeX]{TeX Gyre Pagella}
-  \setsansfont[Ligatures=TeX]{Oxygen}
+  \setsansfont[Ligatures=TeX, Scale=0.9]{Oxygen}
   \setmonofont[Scale=MatchLowercase]{Andika}
   \newfontfamily{\terminal}{Inconsolata Nerd Font Mono}
+  \newfontfamily{\caligrafica}{Weddingday Personal Use}
+  \newfontfamily{\caligra}{Exmouth}
+  \newfontfamily{\initial}{Royal Initialen}
+  \newfontfamily{\grega}{FreeSerif}
+\usepackage{lettrine}
 
 % linguagem 
 \usepackage[brazilian]{babel}
@@ -26,33 +31,47 @@
 \usepackage{graphicx}
   \graphicspath{ {./figs/} }
 
-% seções sem serifa
+% seções & cia
 \usepackage{sectsty}
-  \allsectionsfont{\sffamily}
+  \allsectionsfont{\color{azulUFRB}\sffamily}
+\usepackage{fancyhdr}
+  \pagestyle{fancy}
+    \lhead[\sffamily\small\thepage~\emoji{crossed-swords}\normalsize]{\sffamily \small\leftmark}
+    \rhead[{\sffamily \small \rightmark}]{\sffamily\small~\emoji{crossed-swords}~\thepage\normalsize}
+    \lfoot{}
+    \cfoot{}
+    \rfoot{}
+
 
 % protusão 
 \usepackage{microtype}
 
 % cores
 \usepackage{xcolor}
+  \definecolor{douradoUFRB}{rgb}{0.929411765, 0.603921569, 0.066666667} 
+  \definecolor{azulUFRB}{rgb}{0.160784314, 0.08627451, 0.435294118}
 
 % simbologias e adornos
 \usepackage{hologo}
 \usepackage{postit}
 \usepackage{emoji}
+\usepackage{fontawesome5}
 
 % códigos LaTeX 
 \usepackage{ProfLycee}
+
+% unidades de medidas
+\usepackage{siunitx}
 
 % hiperlinks e metadados
 \usepackage{hyperref}
   \hypersetup
   {
     colorlinks   = true,
-    linkcolor    = blue,
-    citecolor    = blue,
-    filecolor    = blue,
-    urlcolor     = blue,
+    linkcolor    = azulUFRB,
+    citecolor    = azulUFRB,
+    filecolor    = douradoUFRB,
+    urlcolor     = douradoUFRB,
     pdfnewwindow = true,
     pdfproducer  = {LuaTeX},
     pdfcreator   = {LaTeX2e com neovim e arara}, 
